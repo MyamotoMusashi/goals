@@ -1,3 +1,75 @@
-<p>
-  edit-request works!
-</p>
+<div class="col-12">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-2">
+        <a href="#" id="saveButton" class="btn btn-link">Save</a>
+        <a routerLink="/requests/{{request._id}}" id="cancelButton" class="btn btn-link">cancel</a>
+      </div>
+      <div class="row">
+        <div id="request" class="col-10">
+          <h1>title</h1>
+          <input id="title" value="{{request.title}}">
+          <article class="request-item">
+            <h2 class="request-item-header">ID</h2>
+            <input id="id" class="request-item-content" value={{request.id}}>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Status</h2>
+            <select id="status" class="request-item-content">
+              <option selected="selected">{{request.requestStatus}}</option>
+              <option id="work-in-progress" value="work-in-progress">Work In Progress</option>
+              <option id="additional-resources" value="additional-resources">Additional Resources</option>
+              <option id="pending-customer" value="pending-customer">Pending Customer</option>
+              <option id="elevations" value="elevations">Elevations</option>
+              <option id="webexes" value="webexes">WebExes</option>
+            </select>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Info</h2>
+            <textarea id="info" class="request-item-content">{{request.info}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Description</h2>
+            <textarea id="description" class="request-item-content">{{request.description}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Next Steps</h2>
+            <textarea id="nextSteps" class="request-item-content">{{request.nextSteps}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Troubleshooting</h2>
+            <textarea id="troubleshooting" class="request-item-content">{{request.troubleshooting}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Data Collection</h2>
+            <textarea id="dataCollection" class="request-item-content">{{request.dataCollection}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Steps to reproduce</h2>
+            <textarea id="stepsToReproduce" class="request-item-content">{{request.stepsToReproduce}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Is this fresh installation? If not what changed</h2>
+            <textarea id="isItFreshInstall" class="request-item-content">{{request.isItFreshInstall}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">Does this affect just one or all machines ?</h2>
+            <textarea id="oneMachineOrAll" class="request-item-content">{{request.oneMachineOrAll}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">What hotfixes have been tried or are installed ?</h2>
+            <textarea id="hotfixes" class="request-item-content">{{request.hotfixes}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">What related documents have been found</h2>
+            <textarea id="relatedDocuments" class="request-item-content">{{request.relatedDocuments}}</textarea>
+          </article>
+          <article class="request-item">
+            <h2 class="request-item-header">What is our customer expectation</h2>
+            <textarea id="customerExpectation" class="request-item-content">{{request.customerExpectation}}</textarea>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
